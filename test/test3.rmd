@@ -1,0 +1,138 @@
+---
+title: An Example R Markdown Document
+subtitle:  (A Subtitle Would Go Here if This Were a Class)
+author: Steven V. Miller
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+fontsize: 10pt
+output:
+  beamer_presentation:
+    theme: "UHBeamerLight"
+#    keep_tex: true
+#    toc: true
+    slide_level: 3
+---
+
+# Pop Songs and Political Science
+## Morning Train
+
+### Sheena Easton and Game Theory
+
+Sheena Easton describes the following scenario for her baby:
+
+1. Takes the morning train
+2. Works from nine 'til five
+3. Takes another train home again
+4. Finds Sheena Easton waiting for him
+
+\bigskip Sheena Easton and her baby are playing a \textcolor{orange}{zero-sum (total conflict) game}.
+
+- Akin to Holmes-Moriarty game (see: von Neumann and Morgenstern)
+- Solution: \textcolor{orange}{mixed strategy}
+
+
+## Never Gonna Give You Up
+
+### Rick Astley's Re-election Platform
+
+Rick Astley's campaign promises:
+
+- Never gonna give you up
+- Never gonna let you down
+- Never gonna run around and desert you
+- Never gonna make you cry
+- Never gonna say goodbye
+- Never gonna tell a lie and hurt you.
+
+
+\bigskip Whereas these pledges conform to the preferences of the \textcolor{orange}{median voter}, we expect Congressman Astley to secure re-election.
+
+## Caribbean Queen
+### Caribbean Queen and Operation Urgent Fury
+
+In 1984, Billy Ocean released ``Caribbean Queen''.
+
+- Emphasized sharing the same dream
+- Hearts beating as one
+
+\bigskip ``Caribbean Queen'' is about the poor execution of Operation Urgent Fury.
+
+- Echoed JCS chairman David Jones' frustrations with military establishment.
+
+\bigskip Billy Ocean is advancing calls for what became the Goldwater-Nichols Act.
+
+- Wanted to take advantage of \textcolor{orange}{economies of scale}, resolve \textcolor{orange}{coordination problems} in U.S. military.
+
+## Good Day
+### The Good Day Hypothesis
+
+We know the following about Ice Cube's day.
+
+1. The Lakers beat the Supersonics.
+2. No helicopter looked for a murder.
+3. Consumed Fatburger at 2 a.m.
+4. Goodyear blimp: "Ice Cube's a pimp."
+
+\bigskip This leads to two different hypotheses:
+
+- $H_0$: Ice Cube's day is statistically indistinguishable from a typical day.
+- $H_1$: Ice Cube is having a good (i.e. greater than average) day.
+
+\bigskip These hypotheses are tested using archival data of Ice Cube's life.
+
+
+
+# Rendering This Document
+### The Problem of Rendering in Markdown
+
+One big disadvantage to Markdown: compiling.
+
+\bigskip Here's what it would look like from Terminal \medskip
+
+
+![Markdown Call](uhasselt_logo.png)
+
+\bigskip Nobody got time for that.
+
+### One Alternative: RStudio
+
+\begin{center}
+  \includegraphics[width=1.00\textwidth]{uhasselt_logo.png}
+\end{center}
+
+
+
+### Another Alternative: Rscript
+
+Another option: noninteractive \texttt{Rscript}
+
+- I prefer this option since I tend to not like GUIs.
+- Assumes you're on a Linux/Mac system.
+
+Save this to a .R script (call it whatever you like)
+
+- Note that the "s" in "utils" package is cut off in verbatim environment below.
+
+
+```r
+#! /usr/bin/Rscript --vanilla --default-packages=base,stats,utils
+library(knitr)
+library(rmarkdown)
+file <- list.files(pattern='.Rmd')
+rmarkdown::render(file)
+```
+
+
+
+Make it executable. Double click or run in Terminal.
+
+- Keep a copy in each directory, but keep only one .Rmd per directory.
+
+
+# Conclusion
+### Conclusion
+
+Beamer markup is messy. Markdown is much more elegant.
+
+- Incorporating R with Markdown makes Markdown that much better.
+- Rendering Markdown $\rightarrow$ Beamer requires minimal Rscript example.
+ - I provide such a script to accompany this presentation.

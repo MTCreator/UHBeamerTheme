@@ -21,11 +21,13 @@
 %%
 %%%%%%%%%%%%%%
 
+%LIGHTMODE: just change colours
+
 \definecolor{black}{RGB}{0, 0, 0}
-\definecolor{white}{RGB}{255, 255, 255}
+\definecolor{lightdark}{RGB}{255, 255, 255}
 
 \definecolor{dark}{RGB}{35,39,42}
-\definecolor{lightdark}{RGB}{44,47,51}
+\definecolor{white}{RGB}{44,47,51}
 \definecolor{grey}{RGB}{153,170,181}
 \definecolor{blue}{RGB}{114,137,218}
 
@@ -141,7 +143,7 @@
 \setbeamertemplate{sidebar canvas right}{
 \vspace*{\fill}\hspace*{-53pt}%
 {\minipage{\linewidth}
-    \includegraphics[width=50pt]{UHasselt_logo_white.png}
+    \includegraphics[width=50pt]{UHasselt_logo.png}
     %\\
     \tiny{{\color{white}\insertframenumber/\inserttotalframenumber}}
 \endminipage}
@@ -221,7 +223,7 @@
 
 
 % We declare the image that will be used as the logo
-\pgfdeclareimage[width = 0.2\paperwidth]{big}{UHasselt_logo_white.png}
+\pgfdeclareimage[width = 0.2\paperwidth]{big}{UHasselt_logo.png}
 
 
 % This is quite a complicated command. We basically create a “beamercolorbox” for each field and invoke the commands that we had created earlier.
