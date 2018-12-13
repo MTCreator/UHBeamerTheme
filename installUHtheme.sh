@@ -1,5 +1,6 @@
 #!/bin/bash
 #Author: MTCreator
+#License: MIT
 
 mkdir -p ~/texmf/tex/latex/beamer/themes
 
