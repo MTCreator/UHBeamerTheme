@@ -1,19 +1,10 @@
 % Created 2018 by MTCreator (Github)
-%
-% License stuff %TODO 
-%
-% 
-% 
-%
-% 
+% https://github.com/MTCreator/UHBeamerTheme
 
 
 \mode<presentation>
 \usepackage{pgfcomp-version-0-65}
 \usepackage{color}
-
-%\usecolortheme{fly} %Dark theme
-
 
 %%%%%%%%%%%%%%
 %%
@@ -199,14 +190,8 @@
 \Tiny\hspace*{4mm} \Ffootline \hspace{4mm}
 \end{beamercolorbox}}
 %%%%%%
-% We will also remove the navigation symbols, which I personally don’t find very useful
+% We will also remove the navigation symbols
 \setbeamertemplate{navigation symbols}{}
-%%%%%%
-% Now the toughest part–at least for me–customizing the title page.
-% Putting a logo on the title page and text beside it was quite a difficult task and to be fairly honest, my code is not effecient at all. At the very least, it is plain clumsy.
-% Though it does solve the purpose (I hate to use this phrase) it is neither “neat” nor “cool”.
-% Anyway, let’s see how we went about it.
-% For the title page, we needed a logo on the left, a vertical separater line, and finally a place for the title, author, date etc.
 
 % First, let’s create the line
 \newcommand{\TitleLine}{%
@@ -217,7 +202,7 @@
 \pgfline{\pgfpoint{55mm}{0mm}}{\pgfpoint{55mm}{50mm}}
 \end{pgfpicture}}}
 
-% Now let’s create commands for the title etc., that we can call later
+% commands for the title etc.
 
 % Title
 \newcommand{\MyTitle}{%
@@ -249,7 +234,7 @@
 \pgfdeclareimage[width = 0.2\paperwidth]{big}{UHasselt_logo_white.png}
 
 
-% This is quite a complicated command. We basically create a “beamercolorbox” for each field and invoke the commands that we had created earlier.
+% create a “beamercolorbox” for each field and invoke the commands 
 
 \setbeamertemplate{title page}{
 %\TitleLine
