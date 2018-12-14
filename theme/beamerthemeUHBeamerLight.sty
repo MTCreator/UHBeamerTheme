@@ -128,25 +128,41 @@
 %%%%%%
 % We will first define a new command and then include the command in the \setbeamertemplate{} option. 
 \newcommand{\LogoLine}{%
-\raisebox{-12mm}[0pt][0pt]{%
+\raisebox{-3mm}[0pt][0pt]{%
 \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
 \pgfsetlinewidth{0.28mm}
-\color{gray}
-\pgfline{\pgfpoint{-3mm}{1mm}}{\pgfpoint{10.8cm}{1mm}}
+\color{black}
+\pgfline{\pgfpoint{1mm}{1mm}}{\pgfpoint{12.69cm}{1mm}}
 \end{pgfpicture}}}
 
 % Include the line that we just created in the headline
-%\setbeamertemplate{headline}{\LogoLine}
+\setbeamertemplate{headline}{\LogoLine}
 
 % Now the logo. As it turns out. I could not include the logo in the headline. If I tried to, the headline kept shifting downwards.
 % Acting a little smart and lazy, I just included the logo in the right sidebar and shifted it up. 
 \setbeamertemplate{sidebar canvas right}{
-\vspace*{\fill}\hspace*{-53pt}%
-{\minipage{\linewidth}
-    \includegraphics[width=50pt]{UHasselt_logo.png}
-    %\\
-    \tiny{{\color{white}\insertframenumber/\inserttotalframenumber}}
-\endminipage}
+    {%
+    \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
+    \pgfsetlinewidth{0.28mm}
+    \color{black}
+    \pgfline{\pgfpoint{-1.2mm}{-1.87mm}}{\pgfpoint{-1.2mm}{-9.31cm}}
+    \end{pgfpicture}}
+
+    \vspace*{\fill}\hspace*{-53pt}%
+    {\minipage{\linewidth}
+        \includegraphics[width=50pt]{UHasselt_logo.png}
+        %\\
+        \tiny{{\color{white}\insertframenumber/\inserttotalframenumber}}
+    \endminipage}
+}
+
+\setbeamertemplate{sidebar canvas left}{
+    {%
+    \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
+    \pgfsetlinewidth{0.28mm}
+    \color{black}
+    \pgfline{\pgfpoint{1mm}{-1.87mm}}{\pgfpoint{1mm}{-9.31cm}}
+    \end{pgfpicture}}
 }
 
 %%%%%
@@ -157,17 +173,26 @@
 %%%%%
 % Like mentioned above, we will take a similar approach to customize the footline as well and inclued FAA in it.
 
-\newcommand{\Ffootline}{{\color{white}
-\minipage{0.1\linewidth}
-    \insertframenumber/\inserttotalframenumber
-\endminipage
-\minipage{0.32\linewidth}
-    \insertsection
-\endminipage
-\minipage{0.32\linewidth}
-    \textit{\inserttitle}
-\endminipage
-}
+\newcommand{\Ffootline}{
+    {%
+    \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
+        \pgfsetlinewidth{0.28mm}
+        \color{black}
+        \pgfline{\pgfpoint{-4mm}{0.5mm}}{\pgfpoint{12.195cm}{0.5mm}}
+        \end{pgfpicture}}
+
+    {\color{white}
+    \hspace{2mm}
+    \minipage{0.1\linewidth}
+        \insertframenumber/\inserttotalframenumber
+    \endminipage
+    \minipage{0.32\linewidth}
+        \insertsection
+    \endminipage
+    \minipage{0.32\linewidth}
+        \textit{\inserttitle}
+    \endminipage
+    }
 } % And the right end
 
 \setbeamertemplate{footline}{
