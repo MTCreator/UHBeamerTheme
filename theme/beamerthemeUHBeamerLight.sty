@@ -121,8 +121,8 @@
 \raisebox{-3mm}[0pt][0pt]{%
 \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
 \pgfsetlinewidth{0.28mm}
-\color{black}
-\pgfline{\pgfpoint{1mm}{1mm}}{\pgfpoint{12.69cm}{1mm}}
+\color{white}
+\pgfline{\pgfpoint{1mm}{1mm}}{\pgfpoint{\beamer@paperwidth-1.1mm}{1mm}}
 \end{pgfpicture}}}
 
 % Include the line that we just created in the headline
@@ -134,24 +134,24 @@
     {%
     \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
     \pgfsetlinewidth{0.28mm}
-    \color{black}
-    \pgfline{\pgfpoint{-1.2mm}{-1.87mm}}{\pgfpoint{-1.2mm}{-9.31cm}}
+    \color{white}
+    \pgfline{\pgfpoint{-1.2mm}{-1.87mm}}{\pgfpoint{-1.2mm}{(-\beamer@paperheight)+4.1mm}}
     \end{pgfpicture}}
 
-    \vspace*{\fill}\hspace*{-53pt}%
-    {\minipage{\linewidth}
-        \includegraphics[width=50pt]{UHasselt_logo.png}
-        %\\
-        \tiny{{\color{white}\insertframenumber/\inserttotalframenumber}}
-    \endminipage}
+\vspace*{\fill}\hspace*{-53pt}%
+{\minipage{\linewidth}
+    \includegraphics[width=50pt]{UHasselt_logo.png}
+    %\\
+    \tiny{{\color{white}\insertframenumber/\inserttotalframenumber}}
+\endminipage}
 }
 
 \setbeamertemplate{sidebar canvas left}{
     {%
     \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
     \pgfsetlinewidth{0.28mm}
-    \color{black}
-    \pgfline{\pgfpoint{1mm}{-1.87mm}}{\pgfpoint{1mm}{-9.31cm}}
+    \color{white}
+    \pgfline{\pgfpoint{1mm}{-1.87mm}}{\pgfpoint{1mm}{(-\beamer@paperheight)+3.71mm}}
     \end{pgfpicture}}
 }
 
@@ -166,23 +166,23 @@
 \newcommand{\Ffootline}{
     {%
     \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
-        \pgfsetlinewidth{0.28mm}
-        \color{black}
-        \pgfline{\pgfpoint{-4mm}{0.5mm}}{\pgfpoint{12.195cm}{0.5mm}}
-        \end{pgfpicture}}
-
-    {\color{white}
-    \hspace{2mm}
-    \minipage{0.1\linewidth}
-        \insertframenumber/\inserttotalframenumber
-    \endminipage
-    \minipage{0.32\linewidth}
-        \insertsection
-    \endminipage
-    \minipage{0.32\linewidth}
-        \textit{\inserttitle}
-    \endminipage
-    }
+    \pgfsetlinewidth{0.28mm}
+    \color{white}
+    \pgfline{\pgfpoint{-4.1mm}{1.12mm}}{\pgfpoint{\beamer@paperwidth-6.1mm}{1.12mm}}
+    \end{pgfpicture}}    
+    
+{\color{white}
+\hspace{2mm}
+\minipage{0.1\linewidth}
+    \insertframenumber/\inserttotalframenumber
+\endminipage
+\minipage{0.32\linewidth}
+    \insertsection
+\endminipage
+\minipage{0.32\linewidth}
+    \textit{\inserttitle}
+\endminipage
+}
 } % And the right end
 
 \setbeamertemplate{footline}{

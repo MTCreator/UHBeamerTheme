@@ -1,0 +1,28 @@
+---
+title: "Test UHTheme"
+output: 
+    beamer_presentation :
+        theme: "UHBeamerLight"
+        fonttheme: "structurebold"
+classoption: "aspectratio=169"
+author: "MTCreator"
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+header-includes:
+    - \usepackage{graphicx}
+---
+
+# Title
+
+# Slide 2
+
+ - 1
+ - two
+ - III
+
+# boxes
+
+\greybox{123}
+
+\greenbox{456}{789}
+
+\bluebox{101}{112}
