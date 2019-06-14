@@ -1,0 +1,113 @@
+% Created 2018 by MTCreator (Github)
+% https://github.com/MTCreator/UHBeamerTheme
+
+\mode<presentation>
+\usepackage{pgfcomp-version-0-65}
+\usepackage{color}
+
+\definecolor{black}{RGB}{0, 0, 0}
+\definecolor{white}{RGB}{255, 255, 255}
+
+\definecolor{dark}{RGB}{35,39,42}
+\definecolor{lightdark}{RGB}{44,47,51}
+\definecolor{grey}{RGB}{153,170,181}
+\definecolor{blue}{RGB}{114,137,218}
+
+
+\setbeamercolor{headline}{fg=white,bg=lightdark}
+\setbeamercolor{footline}{fg=dark, bg=dark}
+\setbeamerfont{footline}{size=\large,series=\tt}
+\setbeamercolor{separation line}{bg=white}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=grey}
+\setbeamercolor{institute in headline}{fg=grey}
+
+\setbeamercolor{framesubtitle}{fg=grey, bg=red}
+\setbeamercolor{author in head/foot}{fg=white, bg=lightdark}
+\setbeamercolor{title in head/foot}{bg=lightdark, fg=white}
+
+\setbeamercolor*{normal text}{fg=dark, bg=white}
+\setbeamercolor*{block body}{bg=grey,fg=dark}
+\setbeamercolor*{block title}{fg=dark,bg=blue}
+\setbeamerfont{block title}{size=\large,series=\bf}
+\setbeamercolor{upper separation line head}{fg=white}
+
+\setbeamercolor*{example body}{fg=dark,bg=black}
+\setbeamercolor*{example text}{fg=red,bg=black}
+\setbeamercolor*{example title}{bg=red,fg=red}
+
+\setbeamercolor{alerted text}{fg=red}
+
+\setbeamercolor{structure}{fg=blue}
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[rounded=true,shadow=true,colsep*=.75ex,sep=.75ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.07\paperwidth}
+        \begin{center}
+        \end{center}
+        \vskip1ex
+      \end{column}
+      \begin{column}{.675\paperwidth}
+        \vskip4ex
+        \raggedleft
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+      \end{column}
+      \begin{column}{.25\paperwidth}
+        \vskip1cm
+        \begin{center}
+          \includegraphics[width=.7\linewidth]{UHasselt_logo_white.png}
+        \end{center}
+        \vskip1.5cm
+      \end{column}
+      \begin{column}{.03\paperwidth}
+      \end{column}
+    \end{columns}
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+  
+  \leavevmode%
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=3cm]{author in head/foot}%
+      \texttt{http://www-i6.informatik.rwth-aachen.de}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      \texttt{<surname>@cs.rwth-aachen.de}
+    \end{beamercolorbox}}%
+  \vskip0pt%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+
+\mode<all>
