@@ -9,7 +9,7 @@ An unofficial UHasselt Beamer theme, because they only provide a PowerPoint temp
 
   ### Linux
 
-  `installUHtheme.sh` will create a folder in your home directory. This folder will contain the style files and your LaTeX compiler will probably find it.
+  `make install` will create a folder in your home directory. This folder will contain the style files and your LaTeX compiler will probably find it.
 
 ## Usage
 
